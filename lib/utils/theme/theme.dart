@@ -1,0 +1,4 @@
+class IAppTheme {
+  IAppTheme._();
+  
+}
