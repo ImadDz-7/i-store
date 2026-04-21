@@ -1,4 +1,4 @@
 class IAppTheme {
-  IAppTheme._();
-  
+  IAppTheme._(); // Private Constructor
+
 }
