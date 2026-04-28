@@ -5,6 +5,19 @@ class OnBoardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Stack(
+        children: [
+          /// Horizontal Scrollable Page
+          
+          /// Skip Button
+          
+          /// Dot Navigation Smooth Page Indicator
+          
+          /// Circular Button
+          
+        ],
+      ),
+    );
   }
 }
