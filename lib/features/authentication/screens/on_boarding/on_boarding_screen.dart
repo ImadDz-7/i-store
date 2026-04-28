@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:i_store_app/features/authentication/screens/on_boarding/widgets/on_boarding_page.dart';
 import 'package:i_store_app/utils/constants/image_strings.dart';
 import 'package:i_store_app/utils/constants/sized.dart';
 import 'package:i_store_app/utils/constants/text_strings.dart';
@@ -15,28 +16,20 @@ class OnBoardingScreen extends StatelessWidget {
           /// Horizontal Scrollable Page
           PageView(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(ISizes.defaultSpace),
-                child: Column(
-                  children: [
-                    Image(
-                      width: IHelperFunctions.screenWidth() * 0.8,
-                      height: IHelperFunctions.screenHeight() * 0.59,
-                      image: const AssetImage(IImages.onBoardingImage1),
-                    ),
-                    Text(
-                      ITexts.onBoardingTitle1,
-                      style: Theme.of(context).textTheme.headlineMedium,
-                      textAlign: TextAlign.center,
-                    ),
-                    const SizedBox(height: ISizes.spaceBtwItems),
-                    Text(
-                      ITexts.onBoardingSubTitle1,
-                      style: Theme.of(context).textTheme.bodyMedium,
-                      textAlign: TextAlign.center,
-                    ),
-                  ],
-                ),
+              OnBoardingPage(
+                image: IImages.onBoardingImage1,
+                title: ITexts.onBoardingTitle1,
+                subTitle: ITexts.onBoardingSubTitle1,
+              ),
+              OnBoardingPage(
+                image: IImages.onBoardingImage2,
+                title: ITexts.onBoardingTitle2,
+                subTitle: ITexts.onBoardingSubTitle2,
+              ),
+              OnBoardingPage(
+                image: IImages.onBoardingImage3,
+                title: ITexts.onBoardingTitle3,
+                subTitle: ITexts.onBoardingSubTitle3,
               ),
             ],
           ),
