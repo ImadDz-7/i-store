@@ -15,7 +15,7 @@ class OnBoardingScreen extends StatelessWidget {
         children: [
           /// Horizontal Scrollable Page
           PageView(
-            children: [
+            children: const [
               OnBoardingPage(
                 image: IImages.onBoardingImage1,
                 title: ITexts.onBoardingTitle1,
