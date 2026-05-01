@@ -6,6 +6,7 @@ import 'package:i_store_app/utils/constants/sized.dart';
 import 'package:i_store_app/utils/constants/text_strings.dart';
 import 'package:i_store_app/utils/device/device_utility.dart';
 import 'package:i_store_app/utils/helpers/helper_functions.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
@@ -37,16 +38,21 @@ class OnBoardingScreen extends StatelessWidget {
           ),
 
           /// Skip Button
-          OnBoardingSkipButton(),
+          const OnBoardingSkipButton(),
 
           /// Dot Navigation Smooth Page Indicator
-          
-          
+          Positioned(
+            bottom: IDeviceUtils.getBottomNavigationBarHeight(),
+            left: ISizes.defaultSpace,
+            child: SmoothPageIndicator(
+              controller: PageController(),
+              count: 3,
+            ),
+          ),
+
           /// Circular Button
         ],
       ),
     );
   }
 }
-
-
