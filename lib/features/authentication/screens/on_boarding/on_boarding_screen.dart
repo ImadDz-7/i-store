@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:i_store_app/features/authentication/controllers/on_boarding/on_boarding_controller.dart';
 import 'package:i_store_app/features/authentication/screens/on_boarding/widgets/on_boarding_dot_navigation.dart';
 import 'package:i_store_app/features/authentication/screens/on_boarding/widgets/on_boarding_next_button.dart';
 import 'package:i_store_app/features/authentication/screens/on_boarding/widgets/on_boarding_page.dart';
@@ -17,6 +19,7 @@ class OnBoardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(OnBoardingController());
     return Scaffold(
       body: Stack(
         children: [
