@@ -5,6 +5,7 @@ import 'package:i_store_app/utils/constants/image_strings.dart';
 import 'package:i_store_app/utils/constants/sized.dart';
 import 'package:i_store_app/utils/constants/text_strings.dart';
 import 'package:i_store_app/utils/helpers/helper_functions.dart';
+import 'package:iconsax/iconsax.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -32,12 +33,37 @@ class LoginScreen extends StatelessWidget {
                     ITexts.loginTitle,
                     style: Theme.of(context).textTheme.headlineMedium,
                   ),
-                  const SizedBox(height: ISizes.sm),
+                  const SizedBox(height: ISizes.sm - 4),
                   Text(
                     ITexts.loginSubtitle,
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
                 ],
+              ),
+
+              /// Form
+              Form(
+                child: Column(
+                  children: [
+                    /// Email
+                    TextFormField(
+                      decoration: const InputDecoration(
+                        prefixIcon: Icon(Iconsax.direct_right),
+                        labelText: ITexts.email,
+                      ),
+                    ),
+                    const SizedBox(height: ISizes.spaceBtwInputFields),
+
+                    /// Password
+                    TextFormField(
+                      decoration: const InputDecoration(
+                        prefixIcon: Icon(Iconsax.password_check),
+                        suffixIcon: Icon(Iconsax.eye_slash),
+                        labelText: ITexts.password,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
