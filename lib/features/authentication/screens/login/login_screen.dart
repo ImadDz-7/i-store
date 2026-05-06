@@ -86,6 +86,24 @@ class LoginScreen extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: ISizes.spaceBtwSections),
+
+                    /// Sign in Button
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: const Text(ITexts.signIn),
+                      ),
+                    ),
+
+                    /// Create Account Button
+                    SizedBox(
+                      width: double.infinity,
+                      child: OutlinedButton(
+                        onPressed: () {},
+                        child: const Text(ITexts.createAccount),
+                      ),
+                    ),
                   ],
                 ),
               ),
