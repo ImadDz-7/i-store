@@ -79,8 +79,13 @@ class LoginScreen extends StatelessWidget {
                         ),
 
                         /// Forget Password
+                        TextButton(
+                          onPressed: () {},
+                          child: const Text(ITexts.forgetPassword),
+                        ),
                       ],
                     ),
+                    const SizedBox(height: ISizes.spaceBtwSections),
                   ],
                 ),
               ),
