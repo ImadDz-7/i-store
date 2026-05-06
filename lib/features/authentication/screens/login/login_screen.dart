@@ -66,6 +66,7 @@ class LoginScreen extends StatelessWidget {
 
                     /// Remember Me & Forget Password
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         /// Remember Me
                         Row(
@@ -95,6 +96,7 @@ class LoginScreen extends StatelessWidget {
                         child: const Text(ITexts.signIn),
                       ),
                     ),
+                    const SizedBox(height: ISizes.spaceBtwItems),
 
                     /// Create Account Button
                     SizedBox(
@@ -104,8 +106,36 @@ class LoginScreen extends StatelessWidget {
                         child: const Text(ITexts.createAccount),
                       ),
                     ),
+                    const SizedBox(height: ISizes.spaceBtwSections),
                   ],
                 ),
+              ),
+
+              /// Divider
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Flexible(
+                    child: Divider(
+                      color: dark ? IColors.darkGrey : IColors.grey,
+                      thickness: 0.5,
+                      indent: 60,
+                      endIndent: 5,
+                    ),
+                  ),
+                  Text(
+                    ITexts.orSignInWith,
+                    style: Theme.of(context).textTheme.labelMedium,
+                  ),
+                  Flexible(
+                    child: Divider(
+                      color: dark ? IColors.darkGrey : IColors.grey,
+                      thickness: 0.5,
+                      indent: 5,
+                      endIndent: 60,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
