@@ -54,7 +54,7 @@ class ILoginForm extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: ISizes.spaceBtwSections),
+          const SizedBox(height: ISizes.spaceBtwSections - 8),
 
           /// Sign in Button
           SizedBox(

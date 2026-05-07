@@ -27,7 +27,7 @@ class ITexts{
   static const String username = 'Username';
   static const String phoneNum = 'Phone Number';
   static const String rememberMe = 'Remember Me';
-  static const String forgetPassword = 'Forget Password';
+  static const String forgetPassword = 'Forget Password?';
   static const String signIn = 'Sign In';
   static const String createAccount = 'Create Account';
   static const String orSignInWith = 'or sign in with';

@@ -31,8 +31,12 @@ class LoginScreen extends StatelessWidget {
               const ILoginForm(),
 
               /// Divider
-              IFormDivider(dark: dark),
-              const SizedBox(height: ISizes.spaceBtwSections),
+              IFormDivider(
+                dark: dark,
+                dividerText: ITexts.orSignInWith,
+              ),
+              const SizedBox(height: ISizes.spaceBtwSections - 10),
+
               /// Footer
               const ISocialButtons(),
             ],
@@ -42,4 +46,3 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
-

@@ -5,10 +5,11 @@ import 'package:i_store_app/utils/constants/text_strings.dart';
 class IFormDivider extends StatelessWidget {
   const IFormDivider({
     Key? key,
-    required this.dark,
+    required this.dark, this.dividerText,
   }) : super(key: key);
 
   final bool dark;
+  final dividerText;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class IFormDivider extends StatelessWidget {
           ),
         ),
         Text(
-          ITexts.orSignInWith,
+          dividerText,
           style: Theme.of(context).textTheme.labelMedium,
         ),
         Flexible(
