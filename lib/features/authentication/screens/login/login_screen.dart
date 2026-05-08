@@ -36,7 +36,7 @@ class LoginScreen extends StatelessWidget {
                 dividerText: ITexts.orSignInWith,
               ),
               const SizedBox(height: ISizes.spaceBtwSections - 10),
-
+              
               /// Footer
               const ISocialButtons(),
             ],
