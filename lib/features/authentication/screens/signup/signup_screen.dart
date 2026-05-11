@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:i_store_app/common/widgets/login_signup/form_divider.dart';
 import 'package:i_store_app/utils/constants/colors.dart';
 import 'package:i_store_app/utils/constants/sized.dart';
 import 'package:i_store_app/utils/constants/text_strings.dart';
@@ -15,7 +16,7 @@ class SignupScreen extends StatelessWidget {
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(ISizes.defaultSpace),
+          padding: EdgeInsets.only(right: ISizes.defaultSpace, left: ISizes.defaultSpace, top: 5,),
           child: Column(
             children: [
               /// Signup Title
@@ -23,7 +24,7 @@ class SignupScreen extends StatelessWidget {
                 ITexts.signupTitle,
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
-              const SizedBox(height: ISizes.spaceBtwSections),
+              const SizedBox(height: ISizes.spaceBtwSections - 8),
 
               /// Form
               Form(
@@ -68,7 +69,7 @@ class SignupScreen extends StatelessWidget {
                     TextFormField(
                       expands: false,
                       decoration: const InputDecoration(
-                        labelText: ITexts.username,
+                        labelText: ITexts.email,
                         prefixIcon: Icon(Iconsax.direct),
                       ),
                     ),
@@ -78,7 +79,7 @@ class SignupScreen extends StatelessWidget {
                     TextFormField(
                       expands: false,
                       decoration: const InputDecoration(
-                        labelText: ITexts.username,
+                        labelText: ITexts.phoneNum,
                         prefixIcon: Icon(Iconsax.call),
                       ),
                     ),
@@ -88,12 +89,12 @@ class SignupScreen extends StatelessWidget {
                     TextFormField(
                       expands: false,
                       decoration: const InputDecoration(
-                        labelText: ITexts.username,
+                        labelText: ITexts.password,
                         prefixIcon: Icon(Iconsax.password_check),
                         suffixIcon: Icon(Iconsax.eye_slash),
                       ),
                     ),
-                    const SizedBox(height: ISizes.spaceBtwSections),
+                    const SizedBox(height: ISizes.spaceBtwSections - 8),
 
                     /// Terms & Conditions Checkbox
                     Row(
@@ -161,6 +162,22 @@ class SignupScreen extends StatelessWidget {
                         ),
                       ],
                     ),
+                    const SizedBox(height: ISizes.spaceBtwSections - 8),
+
+                    /// SignUp Button
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: const Text(ITexts.createAccount),
+                      ),
+                    ),
+                    const SizedBox(height: ISizes.spaceBtwSections - 8),
+
+                    /// Divider 
+                    
+
+                    /// 
                   ],
                 ),
               ),
