@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:i_store_app/utils/constants/colors.dart';
 import 'package:i_store_app/utils/constants/sized.dart';
 import 'package:i_store_app/utils/constants/text_strings.dart';
+import 'package:i_store_app/utils/helpers/helper_functions.dart';
 import 'package:iconsax/iconsax.dart';
 
 class SignupScreen extends StatelessWidget {
@@ -8,6 +10,7 @@ class SignupScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = IHelperFunctions.isDarkMode(context);
     return Scaffold(
       appBar: AppBar(),
       body: SingleChildScrollView(
@@ -107,7 +110,18 @@ class SignupScreen extends StatelessWidget {
                         Text.rich(
                           TextSpan(
                             children: [
-                              TextSpan(text: ITexts.iAgreeTo),
+                              TextSpan(
+                                text: '${ITexts.iAgreeTo} ',
+                                style: Theme.of(context).textTheme.bodySmall,
+                              ),
+                              TextSpan(
+                                text: ITexts.privacyPolicy, 
+                                style: Theme.of(context).textTheme.bodyMedium!.apply(
+                                  color: dark ? IColors.white : IColors.primary,
+                                  decoration: TextDecoration.underline,
+                                  decorationColor: dark ? IColors.white : IColors.primary,
+                                ),
+                              ),
                             ],
                           ),
                         ),
