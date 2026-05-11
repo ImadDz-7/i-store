@@ -162,7 +162,7 @@ class SignupScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(height: ISizes.spaceBtwSections - 8),
+                    const SizedBox(height: ISizes.spaceBtwSections - 10),
 
                     /// SignUp Button
                     SizedBox(
@@ -172,12 +172,14 @@ class SignupScreen extends StatelessWidget {
                         child: const Text(ITexts.createAccount),
                       ),
                     ),
-                    const SizedBox(height: ISizes.spaceBtwSections - 8),
+                    const SizedBox(height: ISizes.spaceBtwSections - 10),
 
                     /// Divider 
-                    
+                    IFormDivider(dark: dark, dividerText: ITexts.orSignUpWith,),
+                    const SizedBox(height: ISizes.spaceBtwSections - 10),
 
-                    /// 
+                    /// Social Button
+                    
                   ],
                 ),
               ),
