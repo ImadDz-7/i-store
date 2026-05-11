@@ -106,21 +106,55 @@ class SignupScreen extends StatelessWidget {
                             onChanged: (value) {},
                           ),
                         ),
-                        const SizedBox(width: ISizes.spaceBtwItems),
+                        const SizedBox(width: ISizes.spaceBtwItems - 10),
                         Text.rich(
                           TextSpan(
                             children: [
                               TextSpan(
                                 text: '${ITexts.iAgreeTo} ',
-                                style: Theme.of(context).textTheme.bodySmall,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodySmall!
+                                    .copyWith(fontSize: 12),
                               ),
                               TextSpan(
-                                text: ITexts.privacyPolicy, 
-                                style: Theme.of(context).textTheme.bodyMedium!.apply(
-                                  color: dark ? IColors.white : IColors.primary,
-                                  decoration: TextDecoration.underline,
-                                  decorationColor: dark ? IColors.white : IColors.primary,
-                                ),
+                                text: '${ITexts.privacyPolicy} ',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyMedium!
+                                    .copyWith(fontSize: 12)
+                                    .apply(
+                                      color: dark
+                                          ? IColors.white
+                                          : IColors.primary,
+                                      decoration: TextDecoration.underline,
+                                      decorationColor: dark
+                                          ? IColors.white
+                                          : IColors.primary,
+                                    ),
+                              ),
+                              TextSpan(
+                                text: '${ITexts.and} ',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodySmall!
+                                    .copyWith(fontSize: 12),
+                              ),
+                              TextSpan(
+                                text: ITexts.termsOfUse,
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyMedium!
+                                    .copyWith(fontSize: 12)
+                                    .apply(
+                                      color: dark
+                                          ? IColors.white
+                                          : IColors.primary,
+                                      decoration: TextDecoration.underline,
+                                      decorationColor: dark
+                                          ? IColors.white
+                                          : IColors.primary,
+                                    ),
                               ),
                             ],
                           ),
