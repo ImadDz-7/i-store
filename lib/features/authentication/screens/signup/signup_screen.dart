@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:i_store_app/common/widgets/login_signup/form_divider.dart';
+import 'package:i_store_app/common/widgets/login_signup/social_buttons.dart';
 import 'package:i_store_app/utils/constants/colors.dart';
 import 'package:i_store_app/utils/constants/sized.dart';
 import 'package:i_store_app/utils/constants/text_strings.dart';
@@ -94,7 +95,7 @@ class SignupScreen extends StatelessWidget {
                         suffixIcon: Icon(Iconsax.eye_slash),
                       ),
                     ),
-                    const SizedBox(height: ISizes.spaceBtwSections - 8),
+                    const SizedBox(height: ISizes.spaceBtwSections - 12),
 
                     /// Terms & Conditions Checkbox
                     Row(
@@ -162,7 +163,7 @@ class SignupScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(height: ISizes.spaceBtwSections - 10),
+                    const SizedBox(height: ISizes.spaceBtwSections - 12),
 
                     /// SignUp Button
                     SizedBox(
@@ -172,14 +173,16 @@ class SignupScreen extends StatelessWidget {
                         child: const Text(ITexts.createAccount),
                       ),
                     ),
-                    const SizedBox(height: ISizes.spaceBtwSections - 10),
+                    const SizedBox(height: ISizes.spaceBtwSections - 17),
 
                     /// Divider 
                     IFormDivider(dark: dark, dividerText: ITexts.orSignUpWith,),
-                    const SizedBox(height: ISizes.spaceBtwSections - 10),
+                    const SizedBox(height: ISizes.spaceBtwSections - 20),
 
                     /// Social Button
-                    
+                    const ISocialButtons(),
+
+
                   ],
                 ),
               ),
