@@ -17,7 +17,11 @@ class SignupScreen extends StatelessWidget {
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.only(right: ISizes.defaultSpace, left: ISizes.defaultSpace, top: 5,),
+          padding: const EdgeInsets.only(
+            right: ISizes.defaultSpace,
+            left: ISizes.defaultSpace,
+            top: 5,
+          ),
           child: Column(
             children: [
               /// Signup Title
@@ -175,14 +179,15 @@ class SignupScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: ISizes.spaceBtwSections - 17),
 
-                    /// Divider 
-                    IFormDivider(dark: dark, dividerText: ITexts.orSignUpWith,),
+                    /// Divider
+                    IFormDivider(
+                      dark: dark,
+                      dividerText: ITexts.orSignUpWith,
+                    ),
                     const SizedBox(height: ISizes.spaceBtwSections - 20),
 
                     /// Social Button
                     const ISocialButtons(),
-
-
                   ],
                 ),
               ),
