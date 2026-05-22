@@ -63,6 +63,13 @@ class VerifyEmailScreen extends StatelessWidget {
                   child: const Text(ITexts.IContinue),
                 ),
               ),
+              SizedBox(
+                width: double.infinity,
+                child: TextButton(
+                  onPressed: () {},
+                  child: const Text(ITexts.resendEmail),
+                ),
+              ),
             ],
           ),
         ),
