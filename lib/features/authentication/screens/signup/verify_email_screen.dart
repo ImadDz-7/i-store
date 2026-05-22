@@ -38,7 +38,7 @@ class VerifyEmailScreen extends StatelessWidget {
               /// Title & Subtitle
               Text(
                 ITexts.confirmEmail,
-                style: Theme.of(context).textTheme.headlineMedium,
+                style: Theme.of(context).textTheme.headlineMedium!.copyWith(fontSize: 23),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: ISizes.spaceBtwItems),
