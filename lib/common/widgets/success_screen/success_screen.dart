@@ -1,56 +1,39 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:i_store_app/common/widgets/success_screen/success_screen.dart';
+import 'package:i_store_app/common/styles/spacing_styles.dart';
 import 'package:i_store_app/features/authentication/screens/login/login_screen.dart';
 import 'package:i_store_app/utils/constants/image_strings.dart';
 import 'package:i_store_app/utils/constants/sized.dart';
 import 'package:i_store_app/utils/constants/text_strings.dart';
 import 'package:i_store_app/utils/helpers/helper_functions.dart';
 
-class VerifyEmailScreen extends StatelessWidget {
-  const VerifyEmailScreen({super.key});
+class SuccessScreen extends StatelessWidget {
+  const SuccessScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        actions: [
-          IconButton(
-            onPressed: () => Get.offAll(() => const LoginScreen()),
-            icon: const Icon(CupertinoIcons.clear),
-          ),
-        ],
-      ),
       body: SingleChildScrollView(
-        // Padding to Give Default Equal Space in all Screens.
         child: Padding(
-          padding: const EdgeInsets.all(ISizes.defaultSpace),
+          padding: ISpacingStyle.paddingWithAppBarHeight * 2,
           child: Column(
             children: [
               /// Image
               Image(
-                image: const AssetImage(IImages.deliveredEmailIllustration),
+                image: const AssetImage(IImages.staticSuccessIllustration),
                 width: IHelperFunctions.screenWidth() * 0.6,
               ),
               const SizedBox(height: ISizes.spaceBtwSections),
 
               /// Title & Subtitle
               Text(
-                ITexts.confirmEmail,
+                ITexts.yourAccountCreatedTitle,
                 style: Theme.of(context).textTheme.headlineMedium!.copyWith(fontSize: 23),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: ISizes.spaceBtwItems),
               Text(
-                'support@contactsupport.com',
-                style: Theme.of(context).textTheme.labelLarge,
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: ISizes.spaceBtwItems),
-              Text(
-                ITexts.confirmEmailSubtitle,
+                ITexts.yourAccountCreatedSubtitle,
                 style: Theme.of(context).textTheme.labelMedium,
                 textAlign: TextAlign.center,
               ),
@@ -60,16 +43,8 @@ class VerifyEmailScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => Get.to(() => const SuccessScreen()),
+                  onPressed: () => Get.to(() => const LoginScreen()),
                   child: const Text(ITexts.IContinue),
-                ),
-              ),
-              const SizedBox(height: 10),
-              SizedBox(
-                width: double.infinity,
-                child: TextButton(
-                  onPressed: () {},
-                  child: const Text(ITexts.resendEmail),
                 ),
               ),
             ],
