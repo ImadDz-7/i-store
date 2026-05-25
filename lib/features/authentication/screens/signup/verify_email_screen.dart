@@ -39,7 +39,10 @@ class VerifyEmailScreen extends StatelessWidget {
               /// Title & Subtitle
               Text(
                 ITexts.confirmEmail,
-                style: Theme.of(context).textTheme.headlineMedium!.copyWith(fontSize: 23),
+                style: Theme.of(context)
+                    .textTheme
+                    .headlineMedium!
+                    .copyWith(fontSize: 23),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: ISizes.spaceBtwItems),
@@ -60,7 +63,14 @@ class VerifyEmailScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => Get.to(() => const SuccessScreen()),
+                  onPressed: () => Get.to(
+                    () => SuccessScreen(
+                      image: IImages.staticSuccessIllustration,
+                      title: ITexts.yourAccountCreatedTitle,
+                      subTitle: ITexts.yourAccountCreatedSubtitle,
+                      onPressed: () => Get.to(() => const LoginScreen()),
+                    ),
+                  ),
                   child: const Text(ITexts.IContinue),
                 ),
               ),

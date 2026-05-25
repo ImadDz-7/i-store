@@ -8,7 +8,15 @@ import 'package:i_store_app/utils/constants/text_strings.dart';
 import 'package:i_store_app/utils/helpers/helper_functions.dart';
 
 class SuccessScreen extends StatelessWidget {
-  const SuccessScreen({super.key});
+  const SuccessScreen(
+      {super.key,
+      required this.image,
+      required this.title,
+      required this.subTitle,
+      required this.onPressed});
+
+  final String image, title, subTitle;
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -20,20 +28,23 @@ class SuccessScreen extends StatelessWidget {
             children: [
               /// Image
               Image(
-                image: const AssetImage(IImages.staticSuccessIllustration),
+                image: AssetImage(image),
                 width: IHelperFunctions.screenWidth() * 0.6,
               ),
               const SizedBox(height: ISizes.spaceBtwSections),
 
               /// Title & Subtitle
               Text(
-                ITexts.yourAccountCreatedTitle,
-                style: Theme.of(context).textTheme.headlineMedium!.copyWith(fontSize: 23),
+                title,
+                style: Theme.of(context)
+                    .textTheme
+                    .headlineMedium!
+                    .copyWith(fontSize: 23),
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: ISizes.spaceBtwItems),
               Text(
-                ITexts.yourAccountCreatedSubtitle,
+                subTitle,
                 style: Theme.of(context).textTheme.labelMedium,
                 textAlign: TextAlign.center,
               ),
@@ -43,7 +54,7 @@ class SuccessScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () => Get.to(() => const LoginScreen()),
+                  onPressed: onPressed,
                   child: const Text(ITexts.IContinue),
                 ),
               ),
